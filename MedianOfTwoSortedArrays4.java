@@ -1,9 +1,9 @@
 import java.util.Arrays;
 
 class Solution {
-    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+    public double findMedianSortedArrays(int[] nums1, int[] num2) {
 
-        int[] num = new int[nums1.length + nums2.length];
+        int[] num = new int[nums1.length + num2.length];
 
         int index = 0;
 
@@ -11,8 +11,8 @@ class Solution {
             num[index++] = nums1[i];
         }
 
-        for (int i = 0; i < nums2.length; i++) {
-            num[index++] = nums2[i];
+        for (int i = 0; i < num2.length; i++) {
+            num[index++] = num2[i];
         }
 
         Arrays.sort(num);
@@ -25,6 +25,7 @@ class Solution {
         } 
         else {
             return num[n / 2];
+
         }
     }
 }
