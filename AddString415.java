@@ -10,11 +10,11 @@ class Solution {
 
         while (i >= 0 || j >= 0 || carry > 0) {
 
-            int digit1 = 0;
+            int digit = 0;
             int digit2 = 0;
 
             if (i >= 0) {
-                digit1 = num1.charAt(i) - '0';
+                digit = num1.charAt(i) - '0';
                 i--;
             }
 
@@ -23,7 +23,7 @@ class Solution {
                 j--;
             }
 
-            int sum = digit1 + digit2 + carry;
+            int sum = digit + digit2 + carry;
 
             result.append(sum % 10);
 
