@@ -6,12 +6,12 @@ class Solution
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies)
         {
         // Step 1: Find the current maximum number of candies
-        int maxCandies = 0;
+        int maxCandie = 0;
         for (int c : candies) 
         {
-            if (c > maxCandies)
+            if (c > maxCandie)
             {
-                maxCandies = c;
+                maxCandie = c;
             }
         }
         
@@ -19,7 +19,7 @@ class Solution
         List<Boolean> result = new ArrayList<>(candies.length);
         for (int c : candies) 
         {
-            result.add(c + extraCandies >= maxCandies);
+            result.add(c + extraCandies >= maxCandie);
         }
         
         return result;
