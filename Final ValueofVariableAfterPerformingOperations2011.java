@@ -5,14 +5,11 @@ class Solution {
       {
         String a=operations[i];
         int j=1;
-        if(a.charAt(j)=='+'){
+        if(a.charAt(j)=='+')
             iValue++;
-        }
-        else if(a.charAt(j)=='-')
-        {
+        else
             iValue--;
-        }
     }
     return iValue;
 }
-}
+}cls
