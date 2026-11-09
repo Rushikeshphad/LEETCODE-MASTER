@@ -1,10 +1,10 @@
 class Solution {
     public int differenceOfSum(int[] nums) {
-        int EleSum=0;
+        int ElementSum=0;
         int DigitSum=0;
         for(int i=0; i<nums.length;i++)
         {
-            EleSum=EleSum+nums[i];
+            ElementSum=ElementSum+nums[i];
             int digit=nums[i];
           
             while(digit>0)
@@ -14,6 +14,6 @@ class Solution {
                    digit=digit/10;
             }
         }
-        return EleSum-DigitSum;
+        return ElementSum-DigitSum;
     }
 }
