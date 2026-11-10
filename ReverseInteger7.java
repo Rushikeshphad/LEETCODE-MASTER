@@ -1,0 +1,30 @@
+
+class Solution {
+    public int reverse(int x) {
+
+        int digit = 0;
+        int rev = 0;
+
+        while (x != 0) {
+
+            digit = x % 10;
+
+            // Check overflow
+            if (rev > 214748364 || 
+                (rev == 214748364 && digit > 7)) {
+                return 0;
+            }
+
+            if (rev < -214748364 || 
+                (rev == -214748364 && digit < -8)) {
+                return 0;
+            }
+
+            rev = rev * 10 + digit;
+
+            x = x / 10;
+        }
+
+        return rev;
+    }
+}
