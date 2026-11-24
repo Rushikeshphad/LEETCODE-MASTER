@@ -1,18 +1,18 @@
 
 class Solution {
-    public String convertToTitle(int columnNumber) {
+    public String convertToTitle(int columnnumber) {
         StringBuilder result = new StringBuilder();
 
-        while (columnNumber > 0) {
-            columnNumber--;
+        while (columnnumber > 0) {
+            columnnumber--;
 
-            int rem = columnNumber % 26;
+            int rem = columnnumber % 26;
 
             char ch = (char) ('A' + rem);
 
             result.append(ch);
 
-            columnNumber = columnNumber / 26;
+            columnnumber = columnnumber / 26;
         }
 
         return result.reverse().toString();
